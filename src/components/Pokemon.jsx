@@ -17,8 +17,8 @@ export function Pokemon(){
     },[]);
 
     return (
-        <>
-            {pokemons.map((url,index) => <div className="pokemon"><img key={index} src={url}></img></div>)}
-        </>
+        <div className="pokemons-container">
+             {pokemons.map((url,index) => <div className="pokemon" key={index}><img src={url}></img></div>)}
+        </div>
     )
 }

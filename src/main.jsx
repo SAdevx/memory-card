@@ -6,6 +6,5 @@ import { Pokemon } from './components/Pokemon.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <Pokemon />
   </StrictMode>,
 )

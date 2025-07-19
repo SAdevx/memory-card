@@ -5,7 +5,8 @@ import { Pokemon } from './components/Pokemon';
 
 function App() {
     const [score, setScore] = useState(0);
-
+//randomizing
+//score
   return (
     <>
     <div className="header">
@@ -14,7 +15,7 @@ function App() {
           <Score score={score} />
        </div>
     </div>
-    
+    <Pokemon />
     </>
   )
 }

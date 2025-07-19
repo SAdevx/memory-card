@@ -1,6 +1,7 @@
 body {
-    height: 100vh;
+    max-height: 100vh;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .header {
@@ -15,6 +16,17 @@ body {
 }
 
 
+.pokemons-container {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 20px 20px;
+    height: 85vh;  
+    margin: 15px;
+}
+
 .pokemon {
-    height: 200px;
+    display: flex; 
+    background-color: rgb(172, 209, 214);
+    justify-content: center;
+    align-items: stretch;
 }
