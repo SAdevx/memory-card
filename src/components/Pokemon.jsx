@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
-export function Pokemon(){
+export function Pokemon({handleUnSelectedCards}){
     const [pokemons, setPokemons] = useState([]);
+   
 
     useEffect(() => {
         const fetchPokeMon = async () => {
@@ -31,7 +32,12 @@ export function Pokemon(){
 
     return (
         <div className="pokemons-container">
-             {pokemons.map((url,index) => <div onClick={handleRandomOrder} className="pokemon" key={index}><img src={url}></img></div>)}
+             {pokemons.map((pokemonUrl,index) => <div onClick={() => {
+                handleRandomOrder()
+                handleUnSelectedCards(pokemonUrl)
+                return 
+            }}
+            className="pokemon" key={index}><img src={pokemonUrl}></img></div>)}
         </div>
     )
 }
